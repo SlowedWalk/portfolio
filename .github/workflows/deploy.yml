@@ -19,10 +19,6 @@ jobs:
         node-version: [16.x]
 
     steps:
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 6.0.2
-
       - uses: actions/checkout@v2
 
       # - run: pnpm ci
@@ -30,11 +26,11 @@ jobs:
       # - run: npm run test
 
       - name: rsync deployments
-        uses: burnett01/rsync-deployments@5.1
+        uses: burnett01/rsync-deployments@5.2.1
         with:
           switches: -avzr --delete
           path: ./*
-          remote_path: /opt/bitnami/portfolio/
+          remote_path: /opt/bitnami/projects/portfolio/
           remote_host: 13.37.88.156
           remote_user: ubuntu
           remote_key: '${{ secrets.SSH_PRIVATE_KEY }}'

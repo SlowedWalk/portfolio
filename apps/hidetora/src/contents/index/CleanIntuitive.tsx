@@ -51,7 +51,7 @@ function CleanIntuitive() {
       <header className={clsx('mb-8')}>
         <SectionTitle
           title="Eye Catching, Modern & Minimalist Design."
-          caption="Clean & Intuitive"
+          caption="Software Architecture"
           description="Keep the User Interface clean with a modern touch without
             compromising the User Experience."
         />

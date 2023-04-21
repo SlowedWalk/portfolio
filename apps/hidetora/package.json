@@ -1,5 +1,5 @@
 {
-  "name": "enji.dev",
+  "name": "hidetora.tech",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -64,8 +64,5 @@
     "tailwindcss": "^3.2.4",
     "tsconfig": "workspace:*",
     "typescript": "^4.9.4"
-  },
-  "engines": {
-    "node": "^18.0.0"
   }
 }

@@ -4,8 +4,11 @@ import { m } from 'framer-motion';
 import {
   FigmaIcon,
   FramerMotionIcon,
+  IntelliJIdeaIcon,
   NextJsIcon,
+  NodeJsIcon,
   ReactIcon,
+  SpringBootIcon,
   TailwindCssIcon,
   TypeScriptIcon,
   VSCodeIcon,
@@ -40,6 +43,15 @@ function HeaderTechStack() {
         transition={{ delayChildren: 0.6, staggerChildren: 0.025 }}
       >
         <m.li variants={animation}>
+          <div
+            className={clsx(
+              'transition duration-200 hover:text-[#8bc34a] dark:hover:text-[#FFFFFF]'
+            )}
+          >
+            <SpringBootIcon className={clsx('h-6 w-6')} />
+          </div>
+        </m.li>
+        <m.li variants={animation}>
           <div className={clsx('transition duration-200 hover:text-[#3178C6]')}>
             <TypeScriptIcon className={clsx('h-6 w-6')} />
           </div>
@@ -69,6 +81,15 @@ function HeaderTechStack() {
           </div>
         </m.li>
         <m.li variants={animation}>
+          <div
+            className={clsx(
+              'transition duration-200 hover:text-[#8cc84b] dark:hover:text-[#FFFFFF]'
+            )}
+          >
+            <NodeJsIcon className={clsx('h-6 w-6')} />
+          </div>
+        </m.li>
+        <m.li variants={animation}>
           <div className={clsx('h-3 w-[1px] bg-slate-300 dark:bg-slate-700')} />
         </m.li>
         <m.li variants={animation}>
@@ -77,8 +98,8 @@ function HeaderTechStack() {
           </div>
         </m.li>
         <m.li variants={animation}>
-          <div className={clsx('transition duration-200 hover:text-[#F24E1E]')}>
-            <FigmaIcon className={clsx('h-6 w-6')} />
+          <div className={clsx('transition duration-200 hover:text-[#000000]')}>
+            <IntelliJIdeaIcon className={clsx('h-6 w-6')} />
           </div>
         </m.li>
       </m.ul>

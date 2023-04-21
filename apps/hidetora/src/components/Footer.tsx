@@ -13,7 +13,7 @@ import dayjs from '@/utils/dayjs';
 function LastUpdate() {
   return (
     <a
-      href="https://github.com/enjidev/enji.dev"
+      href="https://github.com/SlowedWalk"
       target="_blank"
       rel="noreferrer nofollow"
       className={clsx('hover:underline')}
@@ -112,13 +112,13 @@ function FooterDescription() {
         About Me
       </div>
       <p className={clsx('mb-4 font-normal leading-relaxed')}>
-        I&apos;m Enji, a <strong>front-end developer</strong> who loves
-        intuitive, clean and modern UI design.
+        I&apos;m Afaka, a <strong>full-stack developer</strong>who loves rebust
+        architectures, coupled with clean and modern UI design.
       </p>
       <ul className={clsx('-ml-2 flex gap-1')}>
         <li>
           <a
-            href="https://twitter.com/enjidev"
+            href="https://twitter.com/hidetora_237"
             target="_blank"
             rel="noreferrer nofollow"
             className={clsx('flex h-9 w-9 items-center justify-center')}
@@ -130,7 +130,7 @@ function FooterDescription() {
         </li>
         <li>
           <a
-            href="https://github.com/enjidev"
+            href="https://github.com/SlowedWalk"
             target="_blank"
             rel="noreferrer nofollow"
             className={clsx('flex h-9 w-9 items-center justify-center')}
@@ -142,7 +142,7 @@ function FooterDescription() {
         </li>
         <li>
           <a
-            href="https://figma.com/@enjidev"
+            href="https://figma.com/@hidetora"
             target="_blank"
             rel="noreferrer nofollow"
             className={clsx('flex h-9 w-9 items-center justify-center')}

@@ -11,7 +11,6 @@
     "lint:types": "tsc --noEmit",
     "lint:style": "prettier --check .",
     "analyze": "cross-env ANALYZE=true yarn build",
-    "postbuild": "next-sitemap",
     "db:generate": "prisma generate"
   },
   "dependencies": {

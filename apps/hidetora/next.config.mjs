@@ -17,6 +17,7 @@ const nextConfig = {
       permanent: false,
     },
   ],
+  distDir: 'doc',
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
   reactStrictMode: true,
 };

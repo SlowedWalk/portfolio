@@ -26,7 +26,7 @@ jobs:
         with:
           switches: -avzr --delete
           path: ./*
-          remote_path: /opt/bitnami/projects/portfolio/
+          remote_path: /home/bitnami/
           remote_host: 13.37.88.156
           remote_user: bitnami
           remote_key: '${{ secrets.SSH_PRIVATE_KEY }}'

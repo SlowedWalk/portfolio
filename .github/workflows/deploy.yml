@@ -20,13 +20,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-
-      # - run: pnpm ci
-      # - run: npm run build
-      # - run: npm run test
-
       - name: rsync deployments
-        uses: burnett01/rsync-deployments@5.2
+        uses: burnett01/rsync-deployments@5.1
         with:
           switches: -avzr --delete
           path: ./*

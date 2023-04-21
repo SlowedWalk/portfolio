@@ -25,7 +25,7 @@ jobs:
 
       - uses: actions/checkout@v2
 
-      - run: pnpm ci
+      # - run: pnpm ci
       # - run: npm run build
       # - run: npm run test
 

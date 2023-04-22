@@ -1,4 +1,4 @@
-name: Deployment 🏗️
+name: CI
 
 on:
   push:
@@ -7,17 +7,6 @@ on:
     branches: [release]
 
   workflow_dispatch:
-    {
-      inputs:
-        {
-          environment:
-            {
-              description: 'Environment to deploy to',
-              required: true,
-              default: 'production',
-            },
-        },
-    }
 
 jobs:
   build:
@@ -30,13 +19,16 @@ jobs:
         node-version: [16.x]
 
     steps:
-      - name: Checkout the files
       - uses: actions/checkout@v2
 
-      - name: Deploy to Server 1
-        uses: easingthemes/ssh-deploy@main
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          REMOTE_HOST: 13.37.88.156
-          REMOTE_USER: bitnami
-          TARGET: /home/bitnami/apps/
+      - run: npm ci
+
+      - name: rsync deployments
+        uses: burnett01/rsync-deployments@5.1
+        with:
+          switches: -avzr --delete
+          path: ./*
+          remote_path: /home/bitnami/apps/
+          remote_host: 13.37.88.156
+          remote_user: bitnami
+          remote_key: '${{ secrets.SSH_PRIVATE_KEY }}'

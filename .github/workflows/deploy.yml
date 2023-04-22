@@ -48,8 +48,8 @@ jobs:
         uses: burnett01/rsync-deployments@5.2.1
         with:
           switches: -avzr --delete
-          path: ./*
-          remote_path: /var/www/portfolio/
+          path: src/*
+          remote_path: /home/bitnami/apps/
           remote_host: 13.37.88.156
           remote_user: bitnami
           remote_key: ${{ secrets.SSH_PRIVATE_KEY }}

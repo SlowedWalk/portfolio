@@ -1,34 +1,55 @@
-name: CI
+# name: CI
 
+# on:
+#   push:
+#     branches: [release]
+#   pull_request:
+#     branches: [release]
+
+#   workflow_dispatch:
+
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+
+#     if: github.ref == 'refs/heads/release'
+
+#     strategy:
+#       matrix:
+#         node-version: [16.x]
+
+#     steps:
+#       - uses: actions/checkout@v2
+
+#       - run: npm -v
+
+#       - name: rsync deployments
+#         uses: burnett01/rsync-deployments@5.1
+#         with:
+#           switches: -avzr --delete
+#           path: ./*
+#           remote_path: /home/bitnami/apps/
+#           remote_host: 13.37.88.156
+#           remote_user: bitnami
+#           remote_key: '${{ secrets.SSH_PRIVATE_KEY }}'
+
+#           name: DEPLOY
 on:
   push:
-    branches: [release]
-  pull_request:
-    branches: [release]
-
-  workflow_dispatch:
+    branches:
+      - master
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
-
-    if: github.ref == 'refs/heads/release'
-
-    strategy:
-      matrix:
-        node-version: [16.x]
-
     steps:
       - uses: actions/checkout@v2
-
-      - run: npm -v
-
       - name: rsync deployments
-        uses: burnett01/rsync-deployments@5.1
+        uses: burnett01/rsync-deployments@5.2.1
         with:
           switches: -avzr --delete
           path: ./*
-          remote_path: /home/bitnami/apps/
+          remote_path: /var/www/html/
           remote_host: 13.37.88.156
           remote_user: bitnami
-          remote_key: '${{ secrets.SSH_PRIVATE_KEY }}'
+          remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
